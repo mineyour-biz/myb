@@ -1,0 +1,599 @@
+<!doctype html><html amp lang="en-us"><head><meta charset="utf-8"><title>AlgoVPN - Better, Cheaper, and Faster than Other Options - MY₿</title><meta name="description" content=" So you want to use a service like Vultr to set up a really simple but still secure VPN. One that isn't as painful as OpenVPN to set up. We gotchu fam. The following is a step by step guide, taken directly from the GitHub repo for AlgoVPN. We will be releasing our quickstart video tutorial in the coming days. Algo VPN is a set of Ansible scripts that&hellip;"><link rel="canonical" href="https://mineyour-biz.github.io/myb/algovpn-better-cheaper-and-faster-than-other-options/"><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" type="text/css"><script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script><script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script><script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://mineyour-biz.github.io/myb/amp/algovpn-better-cheaper-and-faster-than-other-options/"},"headline":"AlgoVPN - Better, Cheaper, and Faster than Other Options","datePublished":"2020-05-14T19:16","dateModified":"2021-03-23T22:38","image":{"@type":"ImageObject","url":"https://mineyour-biz.github.io/myb/media/website/MYB-site-logo-2021.png","height":200,"width":500},"description":" So you want to use a service like Vultr to set up a really simple but still secure VPN. One that isn't as painful as OpenVPN to set up. We gotchu fam. The following is a step by step guide, taken directly from the GitHub repo for AlgoVPN. We will be releasing our quickstart video tutorial in the coming days. Algo VPN is a set of Ansible scripts that&hellip;","author":{"@type":"Person","name":"myb"},"publisher":{"@type":"Organization","name":"myb","logo":{"@type":"ImageObject","url":"https://mineyour-biz.github.io/myb/media/website/MYB-site-logo-2021.png","height":200,"width":500}}}</script><style amp-custom>article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+amp-img {
+  max-width: 100%; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
+html {
+  font-size: 1rem; }
+
+body {
+  background: #f1f1f1;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.6; }
+
+a {
+  color:  #039be5;
+  text-decoration: none;
+  -webkit-transition: all 0.12s linear 0s;
+  -o-transition: all 0.12s linear 0s;
+  transition: all 0.12s linear 0s; }
+
+a:hover {
+  color: #262626;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink; }
+
+a:active {
+  color: #262626; }
+
+a:focus {
+  outline: 2px dotted #039be5; }
+
+figure,
+blockquote,
+p,
+ul,
+ol,
+dl,
+table,
+hr,
+fieldset {
+  margin-top: 1.6rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 2.13333rem; }
+
+h1 {
+  font-size: 1.67583rem;
+  font-weight: normal; }
+
+h2 {
+  font-size: 1.4729rem; }
+
+h3 {
+  font-size: 1.29454rem; }
+
+h4 {
+  font-size: 1.13778rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.87891rem; }
+
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.8rem; }
+
+b,
+strong {
+  font-weight: 600; }
+
+blockquote {
+  color: #6c7175;
+  font-family: "Droid Serif", "Times", "Source Serif Pro", serif;
+  font-style: italic;
+  padding: 1.33333rem 0.53333rem 1.33333rem 3.2rem;
+  position: relative; }
+  blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 4.41226rem;
+    position: absolute;
+    left: 0;
+    top: -12px;
+    color: rgba(108, 113, 117, 0.5); }
+  blockquote > :nth-child(1) {
+    margin-top: 0; }
+
+ul,
+ol {
+  margin-left: 2rem; }
+  ul > li,
+  ol > li {
+    list-style: inherit;
+    padding: 0 0 0.26667rem 0.26667rem; }
+
+dl dt {
+  color: #262626;
+  font-weight: 600; }
+
+code,
+pre {
+  background-color: #f1f1f1;
+  font-family: monospace; }
+
+pre {
+  margin: 1.6rem 0 0;
+  padding: 1.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto; }
+  pre > code {
+    color: #262626;
+    padding: 0; }
+
+code {
+  border-radius: 3px;
+  color: #262626;
+  padding: 0.26667rem 0.53333rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #d4d4d4;
+  width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  text-align: left;
+  white-space: nowrap; }
+  table th {
+    font-weight: 500;
+    padding: 0.53333rem 1.06667rem; }
+  table tr {
+    border-bottom: 1px solid #d4d4d4; }
+    table tr:nth-child(2n) {
+      background: #f1f1f1; }
+  table td {
+    padding: 0.53333rem 1.06667rem; }
+
+figcaption {
+  clear: both;
+  color: rgba(108, 113, 117, 0.6);
+  font-size: 0.82397rem;
+  margin: 0.8rem 0 0;
+  text-align: center; }
+
+sub,
+sup {
+  font-size: 65%; }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+.btn, [type=button],
+[type=submit],
+button {
+  background: #039be5;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.87891rem;
+  font-weight: 500;
+  line-height: 1.9;
+  padding: 0.53333rem 1.33333rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  width: auto; }
+  .btn:hover, [type=button]:hover,
+  [type=submit]:hover,
+  button:hover {
+    background: #262626;
+    color: #ffffff; }
+  .btn:focus, [type=button]:focus,
+  [type=submit]:focus,
+  button:focus {
+    outline: none; }
+  .btn-outline {
+    border: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #262626; }
+
+[type=button],
+[type=submit],
+button {
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.navbar {
+  background: #039be5;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  line-height: 3;
+  max-height: 4rem; }
+  .navbar > div {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto; }
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none; }
+  .navbar-sidebar-toggle {
+    left: 0;
+    position: relative;
+    text-indent: -99999rem; }
+    .navbar-sidebar-toggle:before {
+      content: "";
+      display: block;
+      border-top: 0.375rem double #ffffff;
+      border-bottom: 0.125rem solid #ffffff;
+      height: 0.125rem;
+      position: absolute;
+      text-indent: 0;
+      top: 50%;
+      width: 1.3rem;
+      -webkit-transform: translate(0px, -50%);
+      -ms-transform: translate(0px, -50%);
+      transform: translate(0px, -50%); }
+
+
+.logo {
+                    background-image: url('https://mineyour-biz.github.io/myb/media/website/MYB-site-logo-2021.png');
+                    background-size: auto 2rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+            display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+            margin: 0 auto;
+            height: 2rem;
+            text-indent: -9999px;
+            width: 240px;vertical-align: middle;
+        }
+        .logo.logo-text {
+            line-height: 2;
+            text-align: center;
+            text-indent: 0;
+        }
+
+amp-sidebar {
+  background: #ffffff;
+  width: 240px; }
+  amp-sidebar > ul {
+    margin: 0.8rem 0 0;
+    padding: 0; }
+    amp-sidebar > ul ul {
+      border-left: 1px solid #d4d4d4;
+      margin: 0.53333rem 0 0; }
+    amp-sidebar > ul li {
+      color: #262626;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      list-style: none;
+      line-height: 1.4;
+      padding: 0.42667rem 1.06667rem; }
+      amp-sidebar > ul li li {
+        font-weight: normal;
+        padding: 0.26667rem 0 0.26667rem 1.06667rem; }
+    amp-sidebar > ul a,
+    amp-sidebar > ul a:visited {
+      color: #262626; }
+
+.bg-white {
+  background: #ffffff; }
+
+.wrap-page {
+  max-width: 700px;
+  margin: 0 auto; }
+
+@media all and (max-width: 43.6875em) {
+  .wrap-inner {
+    padding: 0 6%; } }
+
+.page-title {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding: 1.6rem 6%; }
+  .page-title > h1 {
+    margin: 0;
+    font-size: 1.29454rem; }
+  .page-title > p {
+    font-size: 0.87891rem;
+    color: #6c7175;
+    line-height: 1.3;
+    margin: 0.26667rem 0 0; }
+  .page-title-author {
+    border-radius: 50%;
+    float: left;
+    height: 2.5rem;
+    width: 2.5rem; }
+    .page-title-author + h1 {
+      margin-left: 3.5rem; }
+      .page-title-author + h1 + p {
+        margin-left: 3.5rem; }
+
+.card {
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  box-shadow: 0 2px 3px rgba(38, 38, 38, 0.1);
+  margin-bottom: 0.8rem;
+  padding-bottom: 1.06667rem; }
+
+  .card-meta {
+    border-top: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-top: 1.06667rem;
+    text-transform: uppercase; }
+    .card-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .card-text {
+    font-size: 0.9375rem;
+    overflow: hidden;
+    padding: 0 6%; }
+    .card-text h2 {
+      font-size: 1.13778rem; }
+
+.post {
+  margin-bottom: 2.13333rem; }
+  .post-featured-image {
+    margin-top: 0;
+    position: relative; }
+    .post-featured-image > figcaption {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 3px;
+      color: #ffffff;
+      position: absolute;
+      bottom: 0.8rem;
+      padding: 0 0.26667rem;
+      right: 6%; }
+  .post-header {
+    margin-bottom: 2.13333rem; }
+  .post-meta {
+    border-bottom: 1px solid #d4d4d4;
+    color: rgba(108, 113, 117, 0.6);
+    font-size: 0.7242rem;
+    font-weight: 500;
+    margin-top: 1.06667rem;
+    padding-bottom: 1.06667rem;
+    text-transform: uppercase; }
+    .post-meta a + time:before {
+      content: "";
+      background: #d4d4d4;
+      display: inline-block;
+      height: 3px;
+      margin: 0 8px;
+      width: 3px;
+      vertical-align: middle;
+      border-radius: 50%; }
+  .post-tag {
+    margin: 0; }
+    .post-tag > li {
+      display: inline-block;
+      padding: 0; }
+      .post-tag > li a {
+        background: #f1f1f1;
+        border-radius: 2px;
+        color: #6c7175;
+        font-size: 0.77248rem;
+        display: inline-block;
+        margin: 0 0.26667rem 0.26667rem 0;
+        padding: 0.26667rem 0.53333rem; }
+        .post-tag > li a:hover {
+          background: #039be5;
+          color: #ffffff;
+          text-decoration: none; }
+  .post-share {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    width: 100%; }
+    .post-share amp-social-share {
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      background-size: 24px; }
+  .post-scroll {
+    color: #ffffff;
+    background: #039be5;
+    bottom: 10px;
+    border-radius: 50%;
+    border: none;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(38, 38, 38, 0.12), 0 1px 1px 0 rgba(38, 38, 38, 0.24);
+    font-size: 1.13778rem;
+    height: 46px;
+    opacity: 0;
+    outline: none;
+    position: fixed;
+    padding: 0;
+    right: 4%;
+    visibility: hidden;
+    width: 46px;
+    z-index: 9999; }
+    .post-scroll-marker {
+      height: 0px;
+      position: absolute;
+      top: 100px;
+      width: 0px; }
+        .post-pagination {
+    background: #f1f1f1;
+    -webkit-box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    box-shadow: inset 0 2px 3px rgba(38, 38, 38, 0.1);
+    border-top: 1px solid #d4d4d4;
+    padding: 1.06667rem 0; }
+    .post-pagination > div {
+      line-height: 1.2;
+      padding: 0.53333rem 1.06667rem;
+      text-align: center; }
+      .post-pagination > div span {
+        display: block;
+        color: #6c7175;
+        font-size: 0.7242rem;
+        font-weight: 500;
+        margin-bottom: 0.26667rem;
+        text-transform: uppercase; }
+    .post-pagination-prev a:before {
+      content: "\2190";
+      margin-right: 0.26667rem; }
+    .post-pagination-next a:after {
+      content: "\2192";
+      margin-left: 0.26667rem; }
+
+aside {
+  margin: 1.6rem 0 0; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-justify {
+  text-align: justify; }
+
+.msg {
+  border-left: 2px solid transparent;
+  padding: 1.06667rem 1.06667rem; }
+  .msg--highlight {
+    background-color: #fff8e6;
+    border-color: #e2ac4f; }
+  .msg--info {
+    background: rgba(45, 97, 201, 0.03);
+    border-color: #039be5; }
+  .msg--success {
+    background: #f7fbf6;
+    border-color: #5ab44b; }
+  .msg--warning {
+    background: #fff3f3;
+    border-color: #c06367;
+    color: #a94442; }
+
+.dropcap:first-letter {
+  float: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 2.16943rem;
+  line-height: 0.7;
+  margin-right: 0.53333rem;
+  padding: 0.53333rem 0.53333rem 0.53333rem 0; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0.8rem 0; }
+  .pagination > a {
+    padding-left: 0;
+    padding-right: 0;
+    width: 49%; }
+  .pagination-right {
+    margin-left: auto; }
+
+.bottom {
+  background: #039be5;
+  color: #ffffff;
+  padding: 1.06667rem 4%;
+  text-align: center; }
+
+    /*
+ * Put your custom CSS code here (it will be used only in the AMP mode)
+ */</style><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><script async src="https://cdn.ampproject.org/v0.js"></script><script custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js" async></script><script custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js" async></script></head><body class="bg-white"><nav class="navbar wrap-inner" id="top"><div><a on="tap:navbar-sidebar.toggle" class="navbar-sidebar-toggle" title="Menu">Menu</a> <a class="logo" href="https://mineyour-biz.github.io/myb/amp/">MY₿</a></div></nav><main class="wrap-page"><article class="post"><div class="wrap-inner"><header class="post-header"><h1>AlgoVPN - Better, Cheaper, and Faster than Other Options</h1></header><p>So you want to use a service like <strong><a rel="noreferrer noopener" href="http://bit.ly/get100vultr" target="_blank">Vultr</a></strong> to set up a really simple but still secure VPN.</p><p>One that isn't as painful as OpenVPN to set up.</p><p>We gotchu fam.</p><p>The following is a step by step guide, taken directly from the <a rel="noreferrer noopener" href="https://github.com/trailofbits/algo" target="_blank">GitHub repo</a> for AlgoVPN.</p><p>We will be releasing our quickstart video tutorial in the coming days.</p><h2>What Is AlgoVPN, Anyway?</h2><p>Algo VPN is a set of Ansible scripts that simplify the setup of a personal WireGuard and IPsec VPN. It uses the most secure defaults available and works with common cloud providers. See theÂ <a href="https://blog.trailofbits.com/2016/12/12/meet-algo-the-vpn-that-works/" target="_blank" rel="noreferrer noopener">release announcement</a>Â for more information.</p><h2><a href="https://github.com/trailofbits/algo#features"></a>Features</h2><ul><li>Supports only IKEv2 with strong crypto (AES-GCM, SHA2, and P-256) for iOS, macOS, and Linux</li><li>SupportsÂ <a href="https://www.wireguard.com/" target="_blank" rel="noreferrer noopener">WireGuard</a>Â for all of the above, in addition to Android and Windows 10</li><li>Generates .conf files and QR codes for iOS, macOS, Android, and Windows WireGuard clients</li><li>Generates Apple profiles to auto-configure iOS and macOS devices for IPsec - no client software required</li><li>Includes a helper script to add and remove users</li><li>Blocks ads with a local DNS resolver (optional)</li><li>Sets up limited SSH users for tunneling traffic (optional)</li><li>Based on current versions of Ubuntu and strongSwan</li><li>Installs to DigitalOcean, Amazon Lightsail, Amazon EC2, Vultr, Microsoft Azure, Google Compute Engine, Scaleway, OpenStack, CloudStack, Hetzner Cloud, orÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/deploy-to-ubuntu.md" target="_blank" rel="noreferrer noopener">your own Ubuntu server (for more advanced users)</a></li></ul><h2><a href="https://github.com/trailofbits/algo#anti-features"></a>Anti-features</h2><ul><li>Does not support legacy cipher suites or protocols like L2TP, IKEv1, or RSA</li><li>Does not install Tor, OpenVPN, or other risky servers</li><li>Does not depend on the security ofÂ <a href="https://tools.ietf.org/html/rfc7457" target="_blank" rel="noreferrer noopener">TLS</a></li><li>Does not claim to provide anonymity or censorship avoidance</li><li>Does not claim to protect you from theÂ <a href="https://en.wikipedia.org/wiki/Federal_Security_Service" target="_blank" rel="noreferrer noopener">FSB</a>,Â <a href="https://en.wikipedia.org/wiki/Ministry_of_State_Security_(China)" target="_blank" rel="noreferrer noopener">MSS</a>,Â <a href="https://en.wikipedia.org/wiki/Directorate-General_for_External_Security" target="_blank" rel="noreferrer noopener">DGSE</a>, orÂ <a href="https://en.wikipedia.org/wiki/Flying_Spaghetti_Monster" target="_blank" rel="noreferrer noopener">FSM</a></li></ul><h2>Deploy the Algo Server</h2><ol><li><strong>Setup an account on</strong> <strong><a rel="noreferrer noopener" href="http://bit.ly/get100vultr" target="_blank">Vultr</a></strong> <em>(our favorite- accepts payment in Bitcoin!)</em></li><li><strong>Get a copy of Algo.</strong>Â The Algo scripts will be installed on your local system. There are two ways to get a copy:<ul><li>Download theÂ <a href="https://github.com/trailofbits/algo/archive/master.zip" target="_blank" rel="noreferrer noopener">ZIP file</a>. Unzip the file to create a directory namedÂ <code>algo-master</code>Â containing the Algo scripts.</li><li>Run the commandÂ <code>git clone https://github.com/trailofbits/algo.git</code>Â to create a directory namedÂ <code>algo</code>Â containing the Algo scripts.</li></ul></li><li><strong>Install Algo's core dependencies.</strong>Â Algo requires thatÂ <strong>Python 3.6 or later</strong>Â and at least one supporting package are installed on your system.<ul><li><strong>macOS:</strong>Â Apple does not provide a suitable version of Python 3 with macOS. Here are two ways to obtain one:<ul><li>Use theÂ <a href="https://brew.sh/" target="_blank" rel="noreferrer noopener">Homebrew</a>Â package manager. After installing Homebrew install Python 3 by runningÂ <code>brew install python3</code>.</li><li>Download and install the latest stableÂ <a href="https://www.python.org/downloads/mac-osx/" target="_blank" rel="noreferrer noopener">Python 3.7.x package</a>Â (currently Python 3.8 will not work). Be sure to run the includedÂ <em>Install Certificates</em>Â command from Finder.</li><li><em>(SeeÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/deploy-from-macos.md" target="_blank" rel="noreferrer noopener">Deploy from macOS</a>Â for more detailed information on installing Python 3 on macOS.)</em></li><li>Once Python 3 is installed on your Mac, from Terminal run:</li><li>Â <code>python3 -m pip install --upgrade virtualenv</code>Â </li></ul></li><li><strong>Linux:</strong>Â Recent releases of Ubuntu, Debian, and Fedora come with Python 3 already installed. Make sure your system is up-to-date and install the supporting package(s):<ul><li>Ubuntu and Debian:<ul><li>Â <code>sudo apt install -y python3-virtualenv</code>Â </li></ul></li><li>Fedora:<ul><li>Â <code>sudo dnf install -y python3-virtualenv</code>Â </li></ul></li><li>Red Hat and CentOS 7 and later (for earlier versions see thisÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/deploy-from-redhat-centos6.md" target="_blank" rel="noreferrer noopener">documentation</a>):<ul><li><code>sudo yum -y install epel-release</code></li></ul><ul><li><code>sudo yum install -y python36-virtualenv</code>Â </li></ul></li></ul></li></ul><ul><li><strong>Windows:</strong>Â Use the Windows Subsystem for Linux (WSL) to create your own copy of Ubuntu running under Windows from which to install and run Algo. See theÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/deploy-from-windows.md" target="_blank" rel="noreferrer noopener">Windows documentation</a>.</li></ul></li><li><strong>Install Algo's remaining dependencies.</strong>Â You'll need to run these commands from the Algo directory each time you download a new copy of Algo. In a Terminal windowÂ <code>cd</code>Â into theÂ <code>algo-master</code>Â (ZIP file) orÂ <code>algo</code>Â (<code>git clone</code>) directory and run:<ul><li>python3 -m virtualenv --python="$(command -v python3)" .env &amp;&amp;</li><li>source .env/bin/activate &amp;&amp;</li><li>python3 -m pip install -U pip virtualenv &amp;&amp;</li><li>python3 -m pip install -r requirements.txt</li><li>(On Fedora add the optionÂ <code>--system-site-packages</code>Â to the first command above. On macOS install the C compiler if prompted.)</li></ul></li><li><strong>Set your configuration options.</strong>Â Open the fileÂ <code>config.cfg</code>Â in your favorite text editor. Specify the users you wish to create in theÂ <code>users</code>Â list. Create a unique user for each device you plan to connect to your VPN. If you want to be able to add or delete users later, youÂ <strong>must</strong>Â selectÂ <code>yes</code>Â at theÂ <code>Do you want to retain the keys (PKI)?</code>Â prompt during the deployment. You should also review the other options before deployment, as changing your mind about them laterÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/faq.md#i-deployed-an-algo-server-can-you-update-it-with-new-features" target="_blank" rel="noreferrer noopener">may require you to deploy a brand new server</a>.</li><li><strong>Start the deployment.</strong>Â Return to your terminal. In the Algo directory, runÂ <code>./algo</code>Â and follow the instructions. There are several optional features available. None are required for a fully functional VPN server. These optional features are described in greater detail inÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/deploy-from-ansible.md" target="_blank" rel="noreferrer noopener">here</a>.</li></ol><p>That's it! You will get the message below when the server deployment process completes. Take note of the p12 (user certificate) password and the CA key in case you need them later,&nbsp;<strong>they will only be displayed this time</strong>.</p><p>You can now set up clients to connect to your VPN. Proceed toÂ <a rel="noreferrer noopener" href="https://github.com/trailofbits/algo#configure-the-vpn-clients" target="_blank">Configure the VPN Clients</a>Â below.</p><pre class="wp-block-code"><code>"#                       Congratulations!                           #"
+"#                  Your Algo server is running.                    #"
+"#  Config files and certificates are in the ./configs/ directory.  #"
+"#              Go to https://whoer.net/ after connecting           #"
+"#    and ensure that all your traffic passes through the VPN.      #"
+"#                     Local DNS resolver 172.16.0.1                #"
+"#        The p12 and SSH keys password for new users is XXXXXXXX   #"
+"#        The CA key password is XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   #"
+"#  Shell access: ssh -F configs/&lt;server_ip>/ssh_config &lt;hostname>  #"</code></pre><h2>Configure the VPN Clients</h2><p>Certificates and configuration files that users will need are placed in the&nbsp;<code>configs</code>&nbsp;directory. Make sure to secure these files since many contain private keys. All files are saved under a subdirectory named with the IP address of your new Algo VPN server.</p><h3><a href="https://github.com/trailofbits/algo#apple-devices"></a>Apple Devices</h3><p>WireGuard is used to provide VPN services on Apple devices. Algo generates a WireGuard configuration file,&nbsp;<code>wireguard/&lt;username&gt;.conf</code>, and a QR code,&nbsp;<code>wireguard/&lt;username&gt;.png</code>, for each user defined in&nbsp;<code>config.cfg</code>.</p><p>On iOS, install theÂ <a href="https://itunes.apple.com/us/app/wireguard/id1441195209?mt=8" target="_blank" rel="noreferrer noopener">WireGuard</a>Â app from the iOS App Store. Then, use the WireGuard app to scan the QR code or AirDrop the configuration file to the device.</p><p>On macOS Mojave or later, install theÂ <a href="https://itunes.apple.com/us/app/wireguard/id1451685025?mt=12" target="_blank" rel="noreferrer noopener">WireGuard</a>Â app from the Mac App Store. WireGuard will appear in the menu bar once you run the app. Click on the WireGuard icon, chooseÂ <strong>Import tunnel(s) from file...</strong>, then select the appropriate WireGuard configuration file.</p><p>On either iOS or macOS, you can enable "Connect on Demand" and/or exclude certain trusted Wi-Fi networks (such as your home or work) by editing the tunnel configuration in the WireGuard app. (Algo can't do this automatically for you.)</p><p>Installing WireGuard is a little more complicated on older version of macOS. SeeÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/client-macos-wireguard.md" target="_blank" rel="noreferrer noopener">Using macOS as a Client with WireGuard</a>.</p><p>If you prefer to use the built-in IPSEC VPN on Apple devices, or need "Connect on Demand" or excluded Wi-Fi networks automatically configured, then seeÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/client-apple-ipsec.md" target="_blank" rel="noreferrer noopener">Using Apple Devices as a Client with IPSEC</a>.</p><h3><a href="https://github.com/trailofbits/algo#android-devices"></a>Android Devices</h3><p>WireGuard is used to provide VPN services on Android. Install theÂ <a href="https://play.google.com/store/apps/details?id=com.wireguard.android" target="_blank" rel="noreferrer noopener">WireGuard VPN Client</a>. Import the correspondingÂ <code>wireguard/&lt;name>.conf</code>Â file to your device, then setup a new connection with it. See theÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/client-android.md" target="_blank" rel="noreferrer noopener">Android setup instructions</a>Â for more detailed walkthrough.</p><h3><a href="https://github.com/trailofbits/algo#windows"></a>Windows</h3><p>WireGuard is used to provide VPN services on Windows. Algo generates a WireGuard configuration file,&nbsp;<code>wireguard/&lt;username&gt;.conf</code>, for each user defined in&nbsp;<code>config.cfg</code>.</p><p>Install theÂ <a href="https://www.wireguard.com/install/#windows-7-8-81-10-2012-2016-2019" target="_blank" rel="noreferrer noopener">WireGuard VPN Client</a>. Import the generatedÂ <code>wireguard/&lt;username>.conf</code>Â file to your device, then setup a new connection with it.</p><h3><a href="https://github.com/trailofbits/algo#linux-wireguard-clients"></a>Linux WireGuard Clients</h3><p>WireGuard works great with Linux clients. SeeÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/client-linux-wireguard.md" target="_blank" rel="noreferrer noopener">this page</a>Â for an example of how to configure WireGuard on Ubuntu.</p><h3><a href="https://github.com/trailofbits/algo#linux-strongswan-ipsec-clients-eg-openwrt-ubuntu-server-etc"></a>Linux strongSwan IPsec Clients (e.g., OpenWRT, Ubuntu Server, etc.)</h3><p>Please seeÂ <a href="https://github.com/trailofbits/algo/blob/master/docs/client-linux-ipsec.md" target="_blank" rel="noreferrer noopener">this page</a>.</p><h3><a href="https://github.com/trailofbits/algo#other-devices"></a>Other Devices</h3><p>Depending on the platform, you may need one or multiple of the following files.</p><ul><li>ipsec/manual/cacert.pem: CA Certificate</li><li>ipsec/manual/.p12: User Certificate and Private Key (in PKCS#12 format)</li><li>ipsec/manual/.conf: strongSwan client configuration</li><li>ipsec/manual/.secrets: strongSwan client configuration</li><li>ipsec/apple/.mobileconfig: Apple Profile</li><li>wireguard/.conf: WireGuard configuration profile</li><li>wireguard/.png: WireGuard configuration QR code</li></ul><h2><a href="https://github.com/trailofbits/algo#setup-an-ssh-tunnel"></a>Setup an SSH Tunnel</h2><p>If you turned on the optional SSH tunneling role, then local user accounts will be created for each user in&nbsp;<code>config.cfg</code>&nbsp;and SSH authorized_key files for them will be in the&nbsp;<code>configs</code>&nbsp;directory (user.ssh.pem). SSH user accounts do not have shell access, cannot authenticate with a password, and only have limited tunneling options (e.g.,&nbsp;<code>ssh -N</code>&nbsp;is required). This ensures that SSH users have the least access required to setup a tunnel and can perform no other actions on the Algo server.</p><p>Use the example command below to start an SSH tunnel by replacing&nbsp;<code>&lt;user&gt;</code>&nbsp;and&nbsp;<code>&lt;ip&gt;</code>&nbsp;with your own. Once the tunnel is setup, you can configure a browser or other application to use 127.0.0.1:1080 as a SOCKS proxy to route traffic through the Algo server.</p><p><code>ssh -D 127.0.0.1:1080 -f -q -C -N &lt;user&gt;@algo -i configs/&lt;ip&gt;/ssh-tunnel/&lt;user&gt;.pem -F configs/&lt;ip&gt;/ssh_config</code></p><h2><a href="https://github.com/trailofbits/algo#ssh-into-algo-server"></a>SSH into Algo Server</h2><p>Your Algo server is configured for key-only SSH access for administrative purposes. Open the Terminal app,&nbsp;<code>cd</code>&nbsp;into the&nbsp;<code>algo-master</code>&nbsp;directory where you originally downloaded Algo, and then use the command listed on the success message:</p><p><code>ssh -F configs/&lt;ip&gt;/ssh_config &lt;hostname&gt;</code></p><p>where&nbsp;<code>&lt;ip&gt;</code>&nbsp;is the IP address of your Algo server. If you find yourself regularly logging into the server then it will be useful to load your Algo ssh key automatically. Add the following snippet to the bottom of&nbsp;<code>~/.bash_profile</code>&nbsp;to add it to your shell environment permanently.</p><p><code>ssh-add ~/.ssh/algo &gt; /dev/null 2&gt;&amp;1</code></p><p>Alternatively, you can choose to include the generated configuration for any Algo servers created into your SSH config. Edit the file&nbsp;<code>~/.ssh/config</code>&nbsp;to include this directive at the top:</p><pre class="wp-block-code"><code>Include &lt;algodirectory>/configs/*/ssh_config
+</code></pre><p>where&nbsp;<code>&lt;algodirectory&gt;</code>&nbsp;is the directory where you cloned Algo.</p><h2><a href="https://github.com/trailofbits/algo#adding-or-removing-users"></a>Adding or Removing Users</h2><p><em>If you chose to save the CA key during the deploy process,</em>&nbsp;then Algo's own scripts can easily add and remove users from the VPN server.</p><ol><li>Update the&nbsp;<code>users</code>&nbsp;list in your&nbsp;<code>config.cfg</code></li><li>Open a terminal,&nbsp;<code>cd</code>&nbsp;to the algo directory, and activate the virtual environment with&nbsp;<code>source .env/bin/activate</code></li><li>Run the command:&nbsp;<code>./algo update-users</code></li></ol><p>After this process completes, the Algo VPN server will contain only the users listed in the&nbsp;<code>config.cfg</code>&nbsp;file.</p><h2><a href="https://github.com/trailofbits/algo#additional-documentation"></a>Additional Documentation</h2><ul><li><a href="https://github.com/trailofbits/algo/blob/master/docs/index.md" target="_blank" rel="noreferrer noopener">Deployment instructions, cloud provider setup instructions, and further client setup instructions available here.</a></li><li><a href="https://github.com/trailofbits/algo/blob/master/docs/faq.md" target="_blank" rel="noreferrer noopener">FAQ</a></li><li><a href="https://github.com/trailofbits/algo/blob/master/docs/troubleshooting.md" target="_blank" rel="noreferrer noopener">Troubleshooting</a></li></ul><hr class="wp-block-separator"><aside><ul class="post-tag"><li><a href="https://mineyour-biz.github.io/myb/amp/tags/algovpn/">algovpn</a></li><li><a href="https://mineyour-biz.github.io/myb/amp/tags/privacy/">privacy</a></li><li><a href="https://mineyour-biz.github.io/myb/amp/tags/vpn/">vpn</a></li></ul><div class="post-share"><amp-social-share type="system" width="40" height="40" data-param-text="AlgoVPN - Better, Cheaper, and Faster than Other Options"></amp-social-share><amp-social-share type="twitter" width="40" height="40" data-param-text="AlgoVPN - Better, Cheaper, and Faster than Other Options" data-param-url="https://mineyour-biz.github.io/myb/amp/algovpn-better-cheaper-and-faster-than-other-options/"></amp-social-share><amp-social-share type="pinterest" width="40" height="40" data-param-url="https://mineyour-biz.github.io/myb/amp/algovpn-better-cheaper-and-faster-than-other-options/"></amp-social-share><amp-social-share type="tumblr" width="40" height="40" data-param-text="AlgoVPN - Better, Cheaper, and Faster than Other Options" data-param-url="https://mineyour-biz.github.io/myb/amp/algovpn-better-cheaper-and-faster-than-other-options/"></amp-social-share><amp-social-share type="whatsapp" width="40" height="40" data-param-text="AlgoVPN - Better, Cheaper, and Faster than Other Options" data-param-url="https://mineyour-biz.github.io/myb/amp/algovpn-better-cheaper-and-faster-than-other-options/"></amp-social-share></div></aside></div></article><nav class="post-pagination wrap-inner"><div class="post-pagination-prev"><span>Previous Post</span> <a href="https://mineyour-biz.github.io/myb/amp/how-to-get-your-dyc-girlfriend-into-crypto-interview-withnrdgrl007/">How to Get Your ðŸ‘© Girlfriend into Crypto -interview w/NrdGrl007</a></div><div class="post-pagination-next"><span>Next Post</span> <a href="https://mineyour-biz.github.io/myb/amp/mineyourbiz-monday-withnrdgrl007-harassing-harry-potters-mom/">Mineyour.biz Monday w/NrdGrl007 - Harassing Harry Potter&#x27;s Mom</a></div></nav></main><amp-animation id="showAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "1",
+                            "visibility": "visible",
+                            "transform": "scale(1)"
+                        }]
+                    }]
+                }</script></amp-animation><amp-animation id="hideAnim" layout="nodisplay"><script type="application/json">{
+                    "duration": "200ms",
+                    "fill": "both",
+                    "iterations": "1",
+                    "direction": "alternate",
+                    "animations": [{
+                        "selector": ".post-scroll",
+                        "keyframes": [{
+                            "opacity": "0",
+                            "visibility": "hidden",
+                            "transform": "scale(0.1)"
+                        }]
+                    }]
+                }</script></amp-animation><div class="post-scroll-marker"><amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer></div><button class="post-scroll" on="tap:top.scrollTo(duration=200)">&#8593;</button><footer class="bottom">Powered by Publii</footer><amp-sidebar id="navbar-sidebar" layout="nodisplay"><ul><li><a href="https://mineyour-biz.github.io/myb/amp/services/">Services</a></li><li><a href="https://mineyour-biz.github.io/myb/amp/shop/" title="Get merch from MY₿">Shop</a><ul class="navbar__submenu level-2" aria-hidden="true"><li><a href="https://mineyour-biz.github.io/myb/amp/mineyourbiz-freedom-phone-de-googled-android-11-gsm-only/" target="_self">Freedom Phone</a></li><li class="has-submenu"><a href="https://mineyour-biz.github.io/myb/amp/shop/" target="_self" aria-haspopup="true">Merch</a><ul class="navbar__submenu level-3" aria-hidden="true"><li><a href="https://mineyour-biz.github.io/myb/amp/shop/index.html#myb_snapback" target="_self">MYB FlatBill</a></li><li><a href="shop/index.html#myb_neon_tee" target="_self">MYB Neon Tee</a></li><li><a href="shop/index.html#btc_windbreaker" target="_self">BTC Jacket</a></li><li><a href="shop/index.html#btc_flat_bill_mono" target="_self">BTC FlatBill</a></li><li><a href="shop/index.html#xmr_flat_bill" target="_self">XMR FlatBill</a></li><li><a href="shop/index.html#neck_gaiters" target="_self">Neck Gaiters</a></li><li><a href="https://mineyour-biz.github.io/myb/amp/flux-swag-shop/" target="_blank">FLUX swag</a></li></ul></li></ul></li><li><a href="https://mineyour-biz.github.io/myb/amp/contact-book-an-interview/">Contact</a></li></ul></amp-sidebar></body></html>

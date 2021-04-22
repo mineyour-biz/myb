@@ -1,0 +1,178 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "MY₿",
+    "description": "",
+    "home_page_url": "https://mineyour-biz.github.io/myb",
+    "feed_url": "https://mineyour-biz.github.io/myb/feed.json",
+    "user_comment": "",
+    "icon": "https://mineyour-biz.github.io/myb/media/website/MYB-site-logo-2021.png",
+    "author": {
+        "name": "myb"
+    },
+    "items": [
+        {
+            "id": "https://mineyour-biz.github.io/myb/how-to-set-up-an-encrypted-private-cloud/",
+            "url": "https://mineyour-biz.github.io/myb/how-to-set-up-an-encrypted-private-cloud/",
+            "title": "How To Set Up An Encrypted Private Cloud",
+            "summary": " Get a $100 credit to follow this tutorial for free &amp; try it out yourself: https://mineyour.biz/go/vultr100/? To access your cloud server from Android, use: https://f-droid.org/en/packages/com.nextcloud.client/ To replace Trello with NextCloud on Android: https://f-droid.org/en/packages/it.niedermann.nextcloud.deck/ To access your cloud server from an iPhone, use: https://apps.apple.com/us/app/nextcloud/id1125420102 Want a much more secure &amp; private phone? Try https://mineyour.biz/product/freedomphone/ Donations: XMR: 46utNFeJbzNWRASRLNC8qcgqLfpWST8KfTxsHdm7TaRL9fpPYKAoSxjUivXt3UhoF9Mz6BvvxbpmUbfSuTAHntJr9wtjMLS Want to BUY Coins, Trade, or just \"Stack Satoshis\"?: https://mineyour.biz/go/trezor/? - hold coins&hellip;",
+            "image": "https://mineyour-biz.github.io/myb/media/posts/84/2021-03-03-Set-Up-Your-Own-Encrypted-Cloud-Seth-Estrada-Mineyourbiz-crypto-consultant.png",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "private cloud",
+                   "privacy",
+                   "nextcloud",
+                   "freedomphone",
+                   "encryption"
+            ],
+            "date_published": "2021-03-03T18:22:53-07:00",
+            "date_modified": "2021-03-25T18:51:13-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/bitcoin-security/",
+            "url": "https://mineyour-biz.github.io/myb/bitcoin-security/",
+            "title": "Bitcoin Security",
+            "summary": " Phew! You made it through that nasty bear market- but boy, now that prices are up, is it a jungle out there or what?! With so much profit flowing through the crypto market cap, fraudsters, thieves, &amp; ne'er-do-wells are looking for ways to get your Bitcoin into their pockets for free. Ever cautious, even some of the most careful old-timers in this scene can potentially get their Bitcoin/crypto hijacked:&hellip;",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "trezor",
+                   "security",
+                   "private keys",
+                   "paper wallet",
+                   "ledger",
+                   "hot wallet",
+                   "hardware wallet",
+                   "bitcoin"
+            ],
+            "date_published": "2021-02-22T17:06:01-07:00",
+            "date_modified": "2021-03-23T22:38:22-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/how-to-choose-a-bitcoin-or-other-cryptocurrency-wallet/",
+            "url": "https://mineyour-biz.github.io/myb/how-to-choose-a-bitcoin-or-other-cryptocurrency-wallet/",
+            "title": "How to Choose A Bitcoin (or other Cryptocurrency) Wallet",
+            "summary": " Cold Wallets from this video Trezor - https://mineyour.biz/go/trezor/? Ledger - https://mineyour.biz/go/ledger/? KeepKey - https://mineyour.biz/go/keepkey/? OpenDime - https://mineyour.biz/go/opendime/? Hot Wallets from this video Edge https://edge.app/? Coinomi https://www.coinomi.com/en/? Zelcore https://zel.network/zelcore/? Exodus https://www.exodus.com/? ",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "seth estrada crypto"
+            ],
+            "date_published": "2021-02-11T01:36:43-07:00",
+            "date_modified": "2021-03-25T21:13:17-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/how-to-get-the-most-from-gpu-crypto-mining-in-2021-hiveos-new-year-giveaway-stream/",
+            "url": "https://mineyour-biz.github.io/myb/how-to-get-the-most-from-gpu-crypto-mining-in-2021-hiveos-new-year-giveaway-stream/",
+            "title": "How To Get The Most From GPU Crypto Mining in 2021 (HiveOS New Year Giveaway Stream!)",
+            "summary": " via IFTTT",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "seth estrada crypto"
+            ],
+            "date_published": "2020-12-30T21:36:27-07:00",
+            "date_modified": "2021-03-23T22:38:22-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/bitcoin-crypto-and-defi-news-mineyourbizmonday-christianity-crypto/",
+            "url": "https://mineyour-biz.github.io/myb/bitcoin-crypto-and-defi-news-mineyourbizmonday-christianity-crypto/",
+            "title": "Bitcoin Crypto &amp; DeFi News: MineYour.Biz/Monday - Christianity + Crypto?",
+            "summary": " ",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "seth estrada crypto"
+            ],
+            "date_published": "2020-11-02T21:36:44-07:00",
+            "date_modified": "2021-03-25T21:13:09-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/bitcoin-crypto-and-defi-news-mineyourbizmonday-not-your-keys/",
+            "url": "https://mineyour-biz.github.io/myb/bitcoin-crypto-and-defi-news-mineyourbizmonday-not-your-keys/",
+            "title": "Bitcoin Crypto &amp; DeFi News: MineYour.Biz/Monday - Not Your Keys...",
+            "summary": " ",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "seth estrada crypto"
+            ],
+            "date_published": "2020-10-26T21:36:55-06:00",
+            "date_modified": "2021-03-25T21:13:02-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/top-3-ways-to-encrypt-aoe0email-messages-even-in-gmaildy~r-for-free/",
+            "url": "https://mineyour-biz.github.io/myb/top-3-ways-to-encrypt-aoe0email-messages-even-in-gmaildy~r-for-free/",
+            "title": "Top 3 Ways to Encrypt Email Messages (EVEN IN GMAIL) for Free",
+            "summary": " ",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "seth estrada crypto"
+            ],
+            "date_published": "2020-10-25T22:36:57-06:00",
+            "date_modified": "2021-03-24T14:28:43-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/crypto-nfts-are-they-ready-are-we-panel-surprise-guest/",
+            "url": "https://mineyour-biz.github.io/myb/crypto-nfts-are-they-ready-are-we-panel-surprise-guest/",
+            "title": "Crypto NFTs: Are They Ready? Are WE? [panel + surprise guest...?]",
+            "summary": " ",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "seth estrada crypto"
+            ],
+            "date_published": "2020-10-19T20:36:36-06:00",
+            "date_modified": "2021-03-24T14:28:57-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/",
+            "url": "https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/",
+            "title": "Sh*tcoin Sherpa on NADs - Yield Farming Rug Pulls &amp; Being Responsible",
+            "summary": " ",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "shitcoin sherpa",
+                   "seth estrada crypto",
+                   "pmon",
+                   "nads"
+            ],
+            "date_published": "2020-10-12T20:36:32-06:00",
+            "date_modified": "2021-03-25T21:13:45-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/a-dumb-blondes-guide-to-blockchain-technology-and-cryptocurrencyaeuless/",
+            "url": "https://mineyour-biz.github.io/myb/a-dumb-blondes-guide-to-blockchain-technology-and-cryptocurrencyaeuless/",
+            "title": "A Dumb Blonde&#x27;s Guide to Blockchain Technology &amp; Cryptocurrencyâ€‹",
+            "summary": " originally published 06/2019 by: Nicole Grinstead I'm a dumb blonde. I admit it Anyone else out there feel like they're not smart enough to understand what's going on with this whole blockchain cryptocurrency craze? It's okay. This is a safe, judgement-free zone I'm talking to the non-tech, non-finance people who don't know what GFI, ETF, or IoT stand for. If you don't know the difference between PoW and PoS&hellip;",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "nrdgrl",
+                   "how to crypto",
+                   "dumb blonde"
+            ],
+            "date_published": "2020-10-07T15:30:08-06:00",
+            "date_modified": "2021-03-25T17:06:00-06:00"
+        }
+    ]
+}
