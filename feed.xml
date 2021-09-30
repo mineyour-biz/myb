@@ -3,12 +3,24 @@
     <title>MY₿ - Mine Your Biz</title>
     <link href="https://mineyour-biz.github.io/myb/feed.xml" rel="self" />
     <link href="https://mineyour-biz.github.io/myb" />
-    <updated>2021-08-19T17:02:51-06:00</updated>
+    <updated>2021-09-30T10:29:43-06:00</updated>
     <author>
         <name>myb</name>
     </author>
     <id>https://mineyour-biz.github.io/myb</id>
 
+    <entry>
+        <title>Book Consulting Time</title>
+        <author>
+            <name>myb</name>
+        </author>
+        <link href="https://mineyour-biz.github.io/myb/book-consulting-time/"/>
+        <id>https://mineyour-biz.github.io/myb/book-consulting-time/</id>
+
+        <updated>2021-09-30T10:29:43-06:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
     <entry>
         <title>How To Set Up An Encrypted Private Cloud</title>
         <author>
@@ -180,25 +192,6 @@
             <summary>
                 <![CDATA[
                      
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>A Dumb Blonde&#x27;s Guide to Blockchain Technology &amp; Cryptocurrencyâ€‹</title>
-        <author>
-            <name>myb</name>
-        </author>
-        <link href="https://mineyour-biz.github.io/myb/a-dumb-blondes-guide-to-blockchain-technology-and-cryptocurrencyaeuless/"/>
-        <id>https://mineyour-biz.github.io/myb/a-dumb-blondes-guide-to-blockchain-technology-and-cryptocurrencyaeuless/</id>
-            <category term="nrdgrl"/>
-            <category term="how to crypto"/>
-            <category term="dumb blonde"/>
-
-        <updated>2021-03-25T17:06:00-06:00</updated>
-            <summary>
-                <![CDATA[
-                     originally published 06/2019 by: Nicole Grinstead I'm a dumb blonde. I admit it Anyone else out there feel like they're not smart enough to understand what's going on with this whole blockchain cryptocurrency craze? It's okay. This is a safe, judgement-free zone I'm talking to the non-tech, non-finance people who don't know what GFI, ETF, or IoT stand for. If you don't know the difference between PoW and PoS&hellip;
                 ]]>
             </summary>
         <content></content>

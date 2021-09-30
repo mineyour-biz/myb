@@ -11,6 +11,18 @@
     },
     "items": [
         {
+            "id": "https://mineyour-biz.github.io/myb/book-consulting-time/",
+            "url": "https://mineyour-biz.github.io/myb/book-consulting-time/",
+            "title": "Book Consulting Time",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+            ],
+            "date_published": "2021-09-30T10:29:43-06:00",
+            "date_modified": "2021-09-30T10:29:43-06:00"
+        },
+        {
             "id": "https://mineyour-biz.github.io/myb/how-to-set-up-an-encrypted-private-cloud/",
             "url": "https://mineyour-biz.github.io/myb/how-to-set-up-an-encrypted-private-cloud/",
             "title": "How To Set Up An Encrypted Private Cloud",
@@ -157,22 +169,6 @@
             ],
             "date_published": "2020-10-12T20:36:32-06:00",
             "date_modified": "2021-03-25T21:13:45-06:00"
-        },
-        {
-            "id": "https://mineyour-biz.github.io/myb/a-dumb-blondes-guide-to-blockchain-technology-and-cryptocurrencyaeuless/",
-            "url": "https://mineyour-biz.github.io/myb/a-dumb-blondes-guide-to-blockchain-technology-and-cryptocurrencyaeuless/",
-            "title": "A Dumb Blonde&#x27;s Guide to Blockchain Technology &amp; Cryptocurrencyâ€‹",
-            "summary": " originally published 06/2019 by: Nicole Grinstead I'm a dumb blonde. I admit it Anyone else out there feel like they're not smart enough to understand what's going on with this whole blockchain cryptocurrency craze? It's okay. This is a safe, judgement-free zone I'm talking to the non-tech, non-finance people who don't know what GFI, ETF, or IoT stand for. If you don't know the difference between PoW and PoS&hellip;",
-            "author": {
-                "name": "myb"
-            },
-            "tags": [
-                   "nrdgrl",
-                   "how to crypto",
-                   "dumb blonde"
-            ],
-            "date_published": "2020-10-07T15:30:08-06:00",
-            "date_modified": "2021-03-25T17:06:00-06:00"
         }
     ]
 }
