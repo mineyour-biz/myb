@@ -3,12 +3,31 @@
     <title>MY₿ - Mine Your Biz</title>
     <link href="https://mineyour-biz.github.io/myb/feed.xml" rel="self" />
     <link href="https://mineyour-biz.github.io/myb" />
-    <updated>2021-09-30T10:48:11-06:00</updated>
+    <updated>2021-10-11T09:21:25-06:00</updated>
     <author>
         <name>myb</name>
     </author>
     <id>https://mineyour-biz.github.io/myb</id>
 
+    <entry>
+        <title>🌿💧CBD 2.0 by MY₿</title>
+        <author>
+            <name>myb</name>
+        </author>
+        <link href="https://mineyour-biz.github.io/myb/cbd/"/>
+        <id>https://mineyour-biz.github.io/myb/cbd/</id>
+            <category term="health"/>
+            <category term="cbd"/>
+
+        <updated>2021-10-11T09:21:25-06:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://mineyour-biz.github.io/myb/media/posts/91/cbd-test-bottle-lineup.png" alt="" />
+                    Coming soon. Our story: After years of learning, and then months of intense trail &amp; error, we finally sourced an oil &amp; gas separation facility that isn't also a supplement manufacturer, then refined a formula that we know is not just a unique flavor- it's also a better base product. This was important to us. You see, health &amp; wellness supplementation is a very saturated market, and we've worked around&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Book Consulting Time</title>
         <author>
@@ -168,27 +187,6 @@
             <category term="seth estrada crypto"/>
 
         <updated>2021-03-24T14:28:57-06:00</updated>
-            <summary>
-                <![CDATA[
-                     
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Sh*tcoin Sherpa on NADs - Yield Farming Rug Pulls &amp; Being Responsible</title>
-        <author>
-            <name>myb</name>
-        </author>
-        <link href="https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/"/>
-        <id>https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/</id>
-            <category term="youtube"/>
-            <category term="shitcoin sherpa"/>
-            <category term="seth estrada crypto"/>
-            <category term="pmon"/>
-            <category term="nads"/>
-
-        <updated>2021-03-25T21:13:45-06:00</updated>
             <summary>
                 <![CDATA[
                      
