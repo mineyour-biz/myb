@@ -3,7 +3,7 @@
     <title>MY₿ - Mine Your Biz</title>
     <link href="https://mineyour-biz.github.io/myb/feed.xml" rel="self" />
     <link href="https://mineyour-biz.github.io/myb" />
-    <updated>2021-10-14T19:39:03-06:00</updated>
+    <updated>2021-10-11T17:14:07-06:00</updated>
     <author>
         <name>myb</name>
     </author>
@@ -27,18 +27,6 @@
 
                 ]]>
             </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Book Consulting Time</title>
-        <author>
-            <name>myb</name>
-        </author>
-        <link href="https://mineyour-biz.github.io/myb/book-consulting-time/"/>
-        <id>https://mineyour-biz.github.io/myb/book-consulting-time/</id>
-
-        <updated>2021-10-14T19:39:03-06:00</updated>
-            <summary></summary>
         <content></content>
     </entry>
     <entry>
@@ -188,6 +176,27 @@
             <category term="seth estrada crypto"/>
 
         <updated>2021-03-24T14:28:57-06:00</updated>
+            <summary>
+                <![CDATA[
+                     
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Sh*tcoin Sherpa on NADs - Yield Farming Rug Pulls &amp; Being Responsible</title>
+        <author>
+            <name>myb</name>
+        </author>
+        <link href="https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/"/>
+        <id>https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/</id>
+            <category term="youtube"/>
+            <category term="shitcoin sherpa"/>
+            <category term="seth estrada crypto"/>
+            <category term="pmon"/>
+            <category term="nads"/>
+
+        <updated>2021-03-25T21:13:45-06:00</updated>
             <summary>
                 <![CDATA[
                      
