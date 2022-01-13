@@ -11,6 +11,19 @@
     },
     "items": [
         {
+            "id": "https://mineyour-biz.github.io/myb/links/",
+            "url": "https://mineyour-biz.github.io/myb/links/",
+            "title": "MY₿ LINKS",
+            "summary": "VIDEOS: YouTube | TikTok | Odysee | SOCIALS: Reddit | Twitter | Telegram | Discord | Instagram | WALLETS: Ledger | Trezor | COMMERCE GATEWAYS: CoinPayments | NOWpayments | CENTRALIZED EXCHANGES: Kanga | KuCoin | MINING TOOLS: HiveOn (software) | MiningRigRentals | GPU MINING HARDWARE: Motherboards | GPUs | Risers | RAM | SSD | USB drives | Frame | PSU | Server PSU | ASIC PSU | Mini Monitor&hellip;",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+            ],
+            "date_published": "2022-01-12T22:37:14-07:00",
+            "date_modified": "2022-01-12T22:37:40-07:00"
+        },
+        {
             "id": "https://mineyour-biz.github.io/myb/cbd/",
             "url": "https://mineyour-biz.github.io/myb/cbd/",
             "title": "🌿💧CBD 2.0 by MY₿",
@@ -155,24 +168,6 @@
             ],
             "date_published": "2020-10-19T20:36:36-06:00",
             "date_modified": "2021-03-24T14:28:57-06:00"
-        },
-        {
-            "id": "https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/",
-            "url": "https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/",
-            "title": "Sh*tcoin Sherpa on NADs - Yield Farming Rug Pulls &amp; Being Responsible",
-            "summary": " ",
-            "author": {
-                "name": "myb"
-            },
-            "tags": [
-                   "youtube",
-                   "shitcoin sherpa",
-                   "seth estrada crypto",
-                   "pmon",
-                   "nads"
-            ],
-            "date_published": "2020-10-12T20:36:32-06:00",
-            "date_modified": "2021-03-25T21:13:45-06:00"
         }
     ]
 }
