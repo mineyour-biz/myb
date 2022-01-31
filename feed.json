@@ -24,22 +24,6 @@
             "date_modified": "2022-01-12T22:37:40-07:00"
         },
         {
-            "id": "https://mineyour-biz.github.io/myb/cbd/",
-            "url": "https://mineyour-biz.github.io/myb/cbd/",
-            "title": "🌿💧CBD 2.0 by MY₿",
-            "summary": "<p class=\"align-center\"><strong><s>$149</s> <i>$125</i> | Pre-Orders Open Soon</strong></p>\n",
-            "image": "https://mineyour-biz.github.io/myb/media/posts/91/cbd-test-bottle-lineup.png",
-            "author": {
-                "name": "myb"
-            },
-            "tags": [
-                   "health",
-                   "cbd"
-            ],
-            "date_published": "2021-10-11T08:43:18-06:00",
-            "date_modified": "2021-10-11T17:14:07-06:00"
-        },
-        {
             "id": "https://mineyour-biz.github.io/myb/how-to-set-up-an-encrypted-private-cloud/",
             "url": "https://mineyour-biz.github.io/myb/how-to-set-up-an-encrypted-private-cloud/",
             "title": "How To Set Up An Encrypted Private Cloud",
@@ -168,6 +152,24 @@
             ],
             "date_published": "2020-10-19T20:36:36-06:00",
             "date_modified": "2021-03-24T14:28:57-06:00"
+        },
+        {
+            "id": "https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/",
+            "url": "https://mineyour-biz.github.io/myb/dyccoin-sherpa-on-nads-yield-farming-rug-pulls-and-being-responsible/",
+            "title": "Sh*tcoin Sherpa on NADs - Yield Farming Rug Pulls &amp; Being Responsible",
+            "summary": " ",
+            "author": {
+                "name": "myb"
+            },
+            "tags": [
+                   "youtube",
+                   "shitcoin sherpa",
+                   "seth estrada crypto",
+                   "pmon",
+                   "nads"
+            ],
+            "date_published": "2020-10-12T20:36:32-06:00",
+            "date_modified": "2021-03-25T21:13:45-06:00"
         }
     ]
 }
